@@ -139,16 +139,16 @@ class ArticleController extends Controller
         $data['categories'] = Category:: all();
         $data['article'] = Article::find($id);
 
-        $tags=[];
+        $tags=null;
 
         # get the tags of each article and convert them in a single string
 
         foreach ($data['article']->tags as $value) {
 
-            array_push($tags,$value->tag->name);
+            $tags =$tags.str($value->tag->name) . ', ' ;
 
         }
-        $data['tags'] = json_encode($tags);
+        $data['tags'] = $tags;
         
         return view('dashboard.articles.form',$data);
     }
@@ -157,14 +157,14 @@ class ArticleController extends Controller
     public function update(Request $request){
 
         $request->validate([
+            'id'=>'required',
             'title'=>'required',
             'slug'=>'required',
             'content'=> 'required',
             'category'=>'required',
-            'description'=>'required',
+            'desc'=>'required',
             'new_category'=>'required_if:category,==,new'
         ]);
-
 
         $data = Article::find($request->id);
 
@@ -191,10 +191,10 @@ class ArticleController extends Controller
             $category_id = $request->category;
         }
 
-        $data -> title = $request ->title;
+        $data->title = $request->title;
         $data->slug=$request->input('slug');
         $data->content=$request->input('content');
-        $data->desc=$request->input('description');
+        $data->desc=$request->input('desc');
         $data->category_id=$category_id;
 
         # delate all the existing tags which are related to the article to set the new ones.
@@ -231,7 +231,7 @@ class ArticleController extends Controller
         $data -> save();
 
         if ($data) {
-            return redirect()->route('list_article')->with('success', 'Article modified successfully !!!');
+            return redirect()->route('articles')->with('success', 'Article Updated successfully !!!');
         }
         else{
             return redirect()->back()->with('error','Unable to update');
@@ -254,11 +254,8 @@ class ArticleController extends Controller
         foreach ($currentArtTag as $item) {
             $item->delete();
         }
-        return redirect()->route('list_article')->with('success', 'Article deleted successfully...');
+        return redirect()->route('articles')->with('success', 'Article deleted successfully...');
     }
-
-
-
 
     /***** */
 
@@ -266,6 +263,11 @@ class ArticleController extends Controller
         $data = [];
         $data['articles']=Article::all();
         return view('blog',$data);
+    }
+
+
+    public function singlePost(){
+        return view('single-article');
     }
 
 }

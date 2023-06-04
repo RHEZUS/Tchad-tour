@@ -32,6 +32,8 @@
         <x-header></x-header>
     </header>
     <main>
+
+        
         
         <!-- Articles start -->
 
@@ -40,45 +42,39 @@
                 <div class="text-center" style="margin-top: 50px;">
                     <h6 class="section-title bg-white text-center px-3">Latest News</h6>
                     <h1 class="mb-3">What is new!!!</h1>
-
-                    <form action="#" method="post" class="search position-relative w-25 mx-auto">
-                        <input type="text" name="search" id="search" class="w-100">
-                        <i class="fa fa-search position-absolute" style="right: 15px; top: 7px"></i>
-                    </form>
-
                 </div> 
                 
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="single_news  wow  fadeInUp" data-wow-delay="0.3s">
-                            <img src="{{asset('images/msg920424135-4281 (1).jpg')}}" alt="">
+                            <img src="{{asset('images/tcad-7.jpg')}}" alt="">
                             <div class="texts">
                                 <p class="date"><a href="#">30 May, 2017</a></p>
                                 <h3>Wood Work Adds Value To <br> Your Property Five</h3>
                                 <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <h3><a href="#">READ MORE</a></h3>
+                                <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="single_news  wow fadeInUp" data-wow-delay="0.5s">
-                            <img src="{{asset('images/msg920424135-4288.jpg')}}" alt="">
+                            <img src="{{asset('images/tcad-8.jpg')}}" alt="">
                             <div class="texts">
                                 <p class="date"><a href="#">30 May, 2017</a></p>
                                 <h3>Wood Work Adds Value To <br> Your Property Five</h3>
                                 <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <h3><a href="#">READ MORE</a></h3>
+                                <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="single_news wow  fadeInUp" data-wow-delay="0.7s">
-                            <img src="{{asset('images/photo1684229673 (10).jpeg')}}" alt="">
+                            <img src="{{asset('images/tcad-9.jpeg')}}" alt="">
                             <div class="texts">
                                 <p class="date"><a href="#">30 May, 2017</a></p>
                                 <h3>Wood Work Adds Value To <br> Your Property Five</h3>
                                 <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <h3><a href="#">READ MORE</a></h3>
+                                <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
                             </div>
                         </div>
                     </div>

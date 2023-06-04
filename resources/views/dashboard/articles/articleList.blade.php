@@ -46,7 +46,7 @@
                         <td>{{$article->title}}</td>
                         <td>{{$article->category->title}}</td>
                         <td>{{$article->author->name}}</td>
-                        <td><a href="{{'update/'.$article->id}}" class="text-primary text-decoration-none mx-3">[Update]</a><a href="#" class="text-danger text-decoration-none">[Delete]</a></td>
+                        <td><a href="{{'update/'.$article->id}}" class="text-primary text-decoration-none mx-3">[Update]</a><a href="{{'delete/'.$article->id}}" class="text-danger text-decoration-none">[Delete]</a></td>
                       </tr>
                       @endforeach
                     

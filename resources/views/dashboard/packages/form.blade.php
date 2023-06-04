@@ -55,8 +55,8 @@
                             <!-- /.col -->
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label>Category</label>
-                                    <select class="form-control select2" style="width: 100%;" id="hid-elt">
+                                    <label>Destination</label>
+                                    <select class="form-control select2" name="dest" style="width: 100%;" id="hid-elt">
                                         <option selected="selected" value="">Select one</option>
                                         <option>Alaska</option>
                                         <option>Delaware</option>

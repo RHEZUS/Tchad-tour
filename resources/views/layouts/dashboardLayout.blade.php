@@ -11,12 +11,16 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{asset('assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+  
   <!-- DataTables -->
   <link rel="stylesheet" href="{{asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
    
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" />
+  
 
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('assets/plugins/summernote/summernote-bs4.min.css')}}">
@@ -229,11 +233,11 @@
             </li>
             
 
-            <li class="nav-item {{$current_route  == 'articles'  || $current_route  == 'articleForm' ? 'menu-is-opening menu-open' : ''}}">
+            <li class="nav-item {{$current_route  == 'articles'  || $current_route  == 'articleForm' || $current_route  ==  'editArt' ? 'menu-is-opening menu-open' : ''}}">
               <a href="#" class="nav-link {{$current_route  == 'articles'  || $current_route  == 'articleForm' ? 'active' : ''}}">
                 <i class="nav-icon fas fa-newspaper"></i>
                 <p>
-                  Articles
+                  articles
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
@@ -290,7 +294,7 @@
             </li>
 
             <li class="nav-item {{$current_route  == 'packages' /* || $current_route  == 'cause-edit'*/ ? 'menu-is-opening menu-open' : ''}}">
-              <a href="#" class="nav-link {{$current_route  == 'packages' /* || $current_route  == 'cause-edit'*/ ? 'active' : ''}}">
+              <a href="{{route('packages')}}" class="nav-link {{$current_route  == 'packages' /* || $current_route  == 'cause-edit'*/ ? 'active' : ''}}">
                 <i class="nav-icon fas fa-archive"></i>
                 <p>
                   Packages
@@ -299,7 +303,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/charts/chartjs.html" class="nav-link">
+                  <a href="{{route('packageForm')}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Add New</p>
                   </a>
@@ -460,6 +464,11 @@
   <script src="{{asset('assets/dist/js/adminlte.min.js')}}"></script>
 
   <script src="{{asset('js/script.js')}}"></script>
+  
+  <!-- Tags Input-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous"></script>
+  
+
 
   <script>
     $(function () {

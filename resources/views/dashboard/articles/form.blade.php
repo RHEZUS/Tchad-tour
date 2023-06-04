@@ -40,6 +40,9 @@
                 <div class="card-body">
                     @if (isset($article->id))
                         <form action="{{route('articleUpdate')}}" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <input type="hidden" name="id" id="id" class="form-control" value="{{$article->id}}"> 
+                            </div>
                     @else
                         <form action="{{route('articleStore')}}" method="post" enctype="multipart/form-data">
                     @endif
@@ -104,9 +107,9 @@
                                     </div>
                                 </div>
     
-                                <div class="mb-3">
-                                <label for="" class="form-label">Tags</label>
-                                <input type="text" class="form-control" value=""  name="tags" id="tags-input" placeholder="">
+                                <div class="mb-3" style="border: 1px solid black">
+                                    <label for="" class="form-label">Tags</label><br>
+                                    <input type="text" class="form-control w-100" value="{{(isset($article) ? $tags : '') }}"  name="tags" id="tags-input" placeholder="">
                                 </div>
                             </div>
                             <!-- /.col -->

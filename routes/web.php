@@ -30,15 +30,24 @@ Route::get('/dashboard/articles/list',[ArticleController::class, 'articleList'])
 Route::get('/dashboard/articles/form',[ArticleController::class, 'form'])->name('articleForm');
 Route::post('/dashboard/articles/form',[ArticleController::class, 'store'])->name('articleStore');
 
-Route::get('/dashboard/articles/update/{id}',[ArticleController::class, 'edit']);
+
+
+Route::get('/dashboard/articles/update/{id}',[ArticleController::class, 'edit'])->name('editArt');
 Route::post('/dashboard/articles/update',[ArticleController::class, 'update'])->name('articleUpdate');
+Route::get('/dashboard/articles/delete/{id}',[ArticleController::class, 'delete']);
 
 Route::get('/dashboard/packages/list',[PackageController::class, 'packageList'])->name('packages');
+Route::get('/dashboard/packages/form',[PackageController::class, 'form'])->name('packageForm');
+Route::post('/dashboard/packages/form',[PackageController::class, 'store'])->name('packageStore');
+
+
+
 Route::get('/dashboard/profiles/list',[ProfileController::class, 'profileList'])->name('profiles');
 Route::get('/dashboard/trash',[TrashController::class,'Trash'])->name('trash');
 
 Auth::routes();
 
 Route::get('/blog', [ArticleController::class, 'blog'])->name('blog');
+Route::get('/articles/post',[ArticleController::class, 'singlePost'])->name('singlePost');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

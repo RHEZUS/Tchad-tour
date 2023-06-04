@@ -50,21 +50,21 @@
 
             <div class="container-fluid container-xxl p-0">
                 <div class="owl-carousel  section-1-carousel">
-                    <div class="item" style="--background: url('{{asset('images/msg920424135-4281 (1).jpg')}}')">
+                    <div class="item" style="--background: url('{{asset('images/tcad-1.jpg')}}')">
                         <div class="carousel-item-caption">
                             <h1>Lorem, ipsum dolor sit.</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex voluptatum adipisci quis iusto dolorem officiis sit reprehenderit ipsum ab!</p>
                             <a href="#" class="text-decoration-none read-btn p-2 me-2">Book Bow</a><a href="#" class="text-decoration-none book-btn p-2">Learn More</a>
                         </div>
                     </div>
-                    <div class="item" style="--background: url('{{asset('images/msg920424135-4288.jpg')}}')">
+                    <div class="item" style="--background: url('{{asset('images/tcad-13.jpg')}}')">
                         <div class="carousel-item-caption">
                             <h1>Lorem, ipsum dolor sit.</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex voluptatum adipisci quis iusto dolorem officiis sit reprehenderit ipsum ab!</p>
                             <a href="#" class="text-decoration-none read-btn p-2 me-2">Learn More</a> <a href="#" class="text-decoration-none book-btn p-2">Book Now</a>
                         </div>
                     </div>
-                    <div class="item" style="--background: url('{{asset('images/photo1684229673 (10).jpeg')}}')">
+                    <div class="item" style="--background: url('{{asset('images/tcad-10.jpeg')}}')">
                         <div class="carousel-item-caption">
                             <h1>Lorem, ipsum dolor sit.</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex voluptatum adipisci quis iusto dolorem officiis sit reprehenderit ipsum ab!</p>
@@ -135,19 +135,19 @@
                             <div class="row g-3">
                                 <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                                     <a class="position-relative d-block overflow-hidden" href="">
-                                        <img class="img-fluid" src="{{asset('assets/img/destination-1.jpg')}}" alt="">
+                                        <img class="img-fluid" src="{{asset('images/tcad-1.jpg')}}" alt="">
                                         <div class="bg-white  fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Thailand</div>
                                     </a>
                                 </div>
                                 <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                                     <a class="position-relative d-block overflow-hidden" href="">
-                                        <img class="img-fluid" src="{{asset('assets/img/destination-2.jpg')}}" alt="">
+                                        <img class="img-fluid" src="{{asset('images/tcad-2.jpg')}}" alt="">
                                         <div class="bg-white  fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Malaysia</div>
                                     </a>
                                 </div>
                                 <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                                     <a class="position-relative d-block overflow-hidden" href="">
-                                        <img class="img-fluid" src="{{asset('assets/img/destination-3.jpg')}}" alt="">
+                                        <img class="img-fluid" src="{{asset('images/tcad-3.jpg')}}" alt="">
                                         <div class="bg-white  fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Australia</div>
                                     </a>
                                 </div>
@@ -155,7 +155,7 @@
                         </div>
                         <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                             <a class="position-relative d-block h-100 overflow-hidden" href="">
-                                <img class="img-fluid position-absolute w-100 h-100" src="{{asset('assets/img/destination-4.jpg')}}" alt="" style="object-fit: cover;">
+                                <img class="img-fluid position-absolute w-100 h-100" src="{{asset('images/tcad-4.jpg')}}" alt="" style="object-fit: cover;">
                                 <!-- <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div> -->
                                 <div class="bg-white  fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Indonesia</div>
                             </a>
@@ -176,7 +176,7 @@
                             <div class="package-item position-relative">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2" style="z-index: 50">15% OFF</div>
                                 <div class="overflow-hidden">
-                                    <img class="img-fluid" src="{{asset('assets/img/package-1.jpg')}}" alt="">
+                                    <img class="img-fluid" src="{{asset('images/tcad-5.jpg')}}" alt="">
                                 </div>
                                 <div class="d-flex border-bottom details">
                                     <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt  me-2"></i>Thailand</small>
@@ -204,7 +204,7 @@
                             <div class="package-item position-relative">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2" style="z-index: 100">25% OFF</div>
                                 <div class="overflow-hidden">
-                                    <img class="img-fluid" src="{{asset('assets/img/package-2.jpg')}}" alt="">
+                                    <img class="img-fluid" src="{{asset('images/tcad-6.jpg')}}" alt="">
                                 </div>
                                 <div class="d-flex border-bottom details">
                                     <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt  me-2"></i>Indonesia</small>
@@ -232,7 +232,7 @@
                             <div class="package-item position-relative">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2" style="z-index: 100">50% OFF</div>
                                 <div class="overflow-hidden">
-                                    <img class="img-fluid" src="{{asset('assets/img/package-3.jpg')}}" alt="">
+                                    <img class="img-fluid" src="{{asset('images/tcad-7.jpg')}}" alt="">
                                 </div>
                                 <div class="d-flex border-bottom details">
                                     <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Malaysia</small>
@@ -272,7 +272,7 @@
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="team-item py-2">
                                 <div class="image-card overflow-hidden my-4 mx-auto rounded-circle" >
-                                    <img class="img-fluid rounded-circle" src="{{asset('assets/img/team-1.jpg')}}" alt="">
+                                    <img class="img-fluid rounded-circle" src="{{asset('images/burma.jpg')}}" alt="">
                                 </div>
 
                                 <div class="text-center pb-2">
@@ -390,34 +390,34 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
                             <div class="single_news  wow  fadeInUp" data-wow-delay="0.3s">
-                                <img src="{{asset('images/msg920424135-4281 (1).jpg')}}" alt="">
+                                <img src="{{asset('images/tcad-7.jpg')}}" alt="">
                                 <div class="texts">
                                     <p class="date"><a href="#">30 May, 2017</a></p>
                                     <h3>Wood Work Adds Value To <br> Your Property Five</h3>
                                     <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <h3><a href="#">READ MORE</a></h3>
+                                    <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single_news  wow fadeInUp" data-wow-delay="0.5s">
-                                <img src="{{asset('images/msg920424135-4288.jpg')}}" alt="">
+                                <img src="{{asset('images/tcad-8.jpg')}}" alt="">
                                 <div class="texts">
                                     <p class="date"><a href="#">30 May, 2017</a></p>
                                     <h3>Wood Work Adds Value To <br> Your Property Five</h3>
                                     <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <h3><a href="#">READ MORE</a></h3>
+                                    <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single_news wow  fadeInUp" data-wow-delay="0.7s">
-                                <img src="{{asset('images/photo1684229673 (10).jpeg')}}" alt="">
+                                <img src="{{asset('images/tcad-9.jpeg')}}" alt="">
                                 <div class="texts">
                                     <p class="date"><a href="#">30 May, 2017</a></p>
                                     <h3>Wood Work Adds Value To <br> Your Property Five</h3>
                                     <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <h3><a href="#">READ MORE</a></h3>
+                                    <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
                                 </div>
                             </div>
                         </div>
