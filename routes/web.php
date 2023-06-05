@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrashController;
@@ -54,13 +55,9 @@ Route::group(['middleware'=>['auth','user_role']], function(){
 
 Route::get('/blog', [ArticleController::class, 'blog'])->name('blog');
 Route::get('/articles/post',[ArticleController::class, 'singlePost'])->name('singlePost');
+Route::get('/article/{id}',[ArticleController::class, 'singlePost']);
 
-
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
+Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 

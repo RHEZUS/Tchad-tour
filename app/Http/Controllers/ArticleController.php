@@ -266,8 +266,16 @@ class ArticleController extends Controller
     }
 
 
-    public function singlePost(){
-        return view('single-article');
+    public function singlePost($id){
+        $data=[];
+        $data['article']= Article::find($id);
+        $data['categories']=Category::all();
+        $data['most_likes'] = Article::orderBy('views')->take(3)->get(); 
+        $data['latest_posts']= Article::orderBy('updated_at')->take(3)->get();
+
+        //return $data['most_likes'];
+
+        return view('single-article',$data);
     }
 
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +19,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('scss/bootstrap.min.css')}}" rel="stylesheet">
-
+   
     <!-- Libraries Stylesheet -->
     <link href="{{asset('assets/lib/animate/animate.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
@@ -30,22 +28,6 @@
     
     </head>
     <body class="">
-        <header>
-            <x-header></x-header>
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-        </header>
         <main>
 
             <div class="container-fluid container-xxl p-0">
@@ -388,39 +370,21 @@
                         <h1 class="mb-5">What is new!!!</h1>
                     </div> 
                     <div class="row">
+
+                        @foreach ($articles as $article)
                         <div class="col-lg-4 col-md-6">
                             <div class="single_news  wow  fadeInUp" data-wow-delay="0.3s">
-                                <img src="{{asset('images/tcad-7.jpg')}}" alt="">
+                                <img src="{{ asset('storage/thumbnails/'.$article->thumbnail)}}" alt="">
                                 <div class="texts">
-                                    <p class="date"><a href="#">30 May, 2017</a></p>
-                                    <h3>Wood Work Adds Value To <br> Your Property Five</h3>
-                                    <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
+                                    <p class="date"><a href="#">{{$article->updated_at->format('m/d/Y')}}</a></p>
+                                    <h2 >{!! words($article->title, $limit = 25, $end = ' .....')!!}</h2>
+                                    <p class="test">{!! words($article->desc, $limit = 25, $end = ' .....')!!}</p>
+                                    <h3><a href="{{'/article/'.$article->id}}">READ MORE</a></h3>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_news  wow fadeInUp" data-wow-delay="0.5s">
-                                <img src="{{asset('images/tcad-8.jpg')}}" alt="">
-                                <div class="texts">
-                                    <p class="date"><a href="#">30 May, 2017</a></p>
-                                    <h3>Wood Work Adds Value To <br> Your Property Five</h3>
-                                    <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_news wow  fadeInUp" data-wow-delay="0.7s">
-                                <img src="{{asset('images/tcad-9.jpeg')}}" alt="">
-                                <div class="texts">
-                                    <p class="date"><a href="#">30 May, 2017</a></p>
-                                    <h3>Wood Work Adds Value To <br> Your Property Five</h3>
-                                    <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <h3><a href="{{route('singlePost')}}">READ MORE</a></h3>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+                        
                     </div>
     
     
@@ -447,5 +411,13 @@
         <!-- Template Javascript -->
         <script src="{{asset('js/main.js')}}"></script>   
         <script src="https://kit.fontawesome.com/5fe79ecddc.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+</script>
     </body>
 </html>

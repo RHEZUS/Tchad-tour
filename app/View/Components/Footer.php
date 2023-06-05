@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Article;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,8 @@ class Footer extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.footer');
+        $data1=[];
+        $data1['latest_posts']= Article::orderBy('updated_at','desc')->limit(3);
+        return view('components.footer',$data1);
     }
 }
