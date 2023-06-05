@@ -373,20 +373,36 @@
                         <h1 class="mb-5">What is new!!!</h1>
                     </div> 
                     <div class="row">
-
-                        @foreach ($articles as $article)
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_news  wow  fadeInUp" data-wow-delay="0.3s">
-                                <img src="{{ asset('storage/thumbnails/'.$article->thumbnail)}}" alt="">
-                                <div class="texts">
-                                    <p class="date"><a href="#">{{$article->updated_at->format('m/d/Y')}}</a></p>
-                                    <h2 >{!! words($article->title, $limit = 25, $end = ' .....')!!}</h2>
-                                    <p class="test">{!! words($article->desc, $limit = 25, $end = ' .....')!!}</p>
-                                    <h3><a href="{{'/article/'.$article->id}}">READ MORE</a></h3>
-                                </div>
+                    @php
+                        $delay = 0.3;
+                        $count=0;
+                    @endphp
+                    @foreach ($articles as $article)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_news  wow  fadeInUp" data-wow-delay="{{$count <= 2 ? $delay.'s' : '0.1s'}}">
+                            <img src="{{ asset('storage/thumbnails/'.$article->thumbnail)}}" alt="">
+                            <div class="texts">
+                                <p class="date"><a href="#">{{$article->updated_at->format('m/d/Y')}}</a></p>
+                                <h3>{!! words($article->title, $limit = 25, $end = ' .....')!!}</h3>
+                                <p class="test">{!! words($article->desc, $limit = 25, $end = ' .....')!!}</p>
+                                <h3><a href="{{'/article/'.$article->id}}">READ MORE</a></h3>
                             </div>
                         </div>
-                        @endforeach
+                    </div>
+                    @php
+                        $delay = $delay+0.2;
+
+                        if ($count >=2 ) {
+
+                            $count =0;
+
+                        }else {
+
+                            $count++;
+                        }
+                        
+                    @endphp  
+                    @endforeach
                         
                     </div>
     

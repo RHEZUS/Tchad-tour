@@ -272,8 +272,9 @@ class ArticleController extends Controller
         $data['categories']=Category::all();
         $data['most_likes'] = Article::orderBy('views')->take(3)->get(); 
         $data['latest_posts']= Article::orderBy('updated_at')->take(3)->get();
+        $data['relateds']= Article::Where('category_id','=',$data['article']->category_id)->take(3)->get();
 
-        //return $data['most_likes'];
+        //return $data['related'];
 
         return view('single-article',$data);
     }

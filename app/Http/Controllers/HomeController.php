@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $data=[];
 
-        $data['articles']= Article::orderBy('updated_at')->take(3)->get();
+        $data['articles']= Article::orderBy('updated_at')->take(4)->get();
 
         return view('welcome',$data);
     }

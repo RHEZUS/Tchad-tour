@@ -63,54 +63,22 @@
                         <div class="single-related">
                             <h2>Related Post</h2>
                             <div class="owl-carousel related-slider">
+                                @foreach ($relateds as $related)
                                 <div class="post-item">
                                     <div class="post-img">
-                                        <img src="{{asset('images/tcad-7.jpg')}}" />
+                                        <img src="{{ asset('storage/thumbnails/'.$related->thumbnail)}}" />
                                     </div>
                                     <div class="post-text">
-                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                                        <a href="">{!! words($related->title, $limit = 8, $end = ' .....')!!}</a>
                                         <div class="post-meta">
                                             <p>By<a href="">Admin</a></p>
-                                            <p>In<a href="">Web Design</a></p>
+                                            <p>In<a href="">{{$related->category->title}}</a></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="post-item">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/tcad-8.jpg')}}" />
-                                    </div>
-                                    <div class="post-text">
-                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                        <div class="post-meta">
-                                            <p>By<a href="">Admin</a></p>
-                                            <p>In<a href="">Web Design</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-item">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/tcad-9.jpeg')}}" />
-                                    </div>
-                                    <div class="post-text">
-                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                        <div class="post-meta">
-                                            <p>By<a href="">Admin</a></p>
-                                            <p>In<a href="">Web Design</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-item">
-                                    <div class="post-img">
-                                        <img src="{{asset('images/tcad-8.jpg')}}" />
-                                    </div>
-                                    <div class="post-text">
-                                        <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                        <div class="post-meta">
-                                            <p>By<a href="">Admin</a></p>
-                                            <p>In<a href="">Web Design</a></p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
+                                
+                                
                             </div>
                         </div>
 
@@ -211,7 +179,7 @@
                                     @foreach ($latest_posts as $latest_post)
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="{{asset('images/tcad-7.jpg')}}" />
+                                            <img src="{{ asset('storage/thumbnails/'.$article->thumbnail)}}" />
                                         </div>
                                         <div class="post-text">
                                             <a href="{{'/article/'.$latest_post->id}}">{{$latest_post->title}}</a>
@@ -244,7 +212,7 @@
                                     @foreach ($most_likes as $mostlike)
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="{{asset('images/tcad-7.jpg')}}" />
+                                            <img src="{{ asset('storage/thumbnails/'.$article->thumbnail)}}" />
                                         </div>
                                         <div class="post-text">
                                             <a href="{{'/article/'.$mostlike->id}}">{{$mostlike->title}}</a>
