@@ -179,7 +179,7 @@
                                     @foreach ($latest_posts as $latest_post)
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="{{ asset('storage/thumbnails/'.$article->thumbnail)}}" />
+                                            <img src="{{ asset('storage/thumbnails/'.$latest_post->thumbnail)}}" />
                                         </div>
                                         <div class="post-text">
                                             <a href="{{'/article/'.$latest_post->id}}">{{$latest_post->title}}</a>
@@ -212,7 +212,7 @@
                                     @foreach ($most_likes as $mostlike)
                                     <div class="post-item">
                                         <div class="post-img">
-                                            <img src="{{ asset('storage/thumbnails/'.$article->thumbnail)}}" />
+                                            <img src="{{ asset('storage/thumbnails/'.$mostlike->thumbnail)}}" />
                                         </div>
                                         <div class="post-text">
                                             <a href="{{'/article/'.$mostlike->id}}">{{$mostlike->title}}</a>
