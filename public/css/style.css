@@ -1,5 +1,7 @@
+/*******************************/
+/********* Dashboard Form ******/
+/*******************************/
 
-/*Tchad-Tour dashboard Forms*/
 .tags-input-wrapper{
     background: transparent;
     padding: 10px;
@@ -34,7 +36,6 @@
 #new-elt{
     display: none;
 }
-/* *** end Tchad-Tour dashboard Forms ****/
 
 .bootstrap-tagsinput .tag {
     background: #14141F;
@@ -53,7 +54,10 @@
     --dark: #14141F;
 }
 
-/****Navbar Website****/
+/*******************************/
+/********* Website Navbar ******/
+/*******************************/
+
 .navbar-toggler,
     .navbar-toggler:focus,
     .navbar-toggler:active,
@@ -98,7 +102,10 @@
     background-color: #fa9801; 
 }
 
-/***Website Footer ***/
+/*******************************/
+/********* Website Footer ******/
+/*******************************/
+
 .links-navbar-nav{
     list-style: none;
     padding:0;
@@ -116,7 +123,10 @@
 }
 
 
-/**** Homepage section-1 ****/
+/*******************************/
+/****** Homepage Carousel ******/
+/*******************************/
+
 
 .section-1-carousel{
    height: min-content;
@@ -227,9 +237,10 @@
     
 }
 
+/*******************************/
+/********* Hero Header *********/
+/*******************************/
 
-
-/*** Hero Header ***/
 .hero-header {
     background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(../img/bg-hero.jpg);
     background-position: center center;
@@ -243,7 +254,11 @@
     color: rgba(255, 255, 255, .5);
 }
 
-/*** Section Title ***/
+
+/*******************************/
+/********* Section Title  ******/
+/*******************************/
+
 .section-title {
     position: relative;
     display: inline-block;
@@ -282,9 +297,10 @@
     width: calc(100% + 60px);
     left: 0;
 }
-/*** End Section Title ***/
 
-
+/*******************************/
+/********* Services ************/
+/*******************************/
 
 /*** Service ***/
 .service-item {
@@ -324,11 +340,11 @@ background-color: goldenrod;
     background-color: goldenrod;
     border: none;
 }
-/*** End Service ***/
 
 
-
-/*** Destination ***/
+/*******************************/
+/********* Destinations ********/
+/*******************************/
 
 .destination img {
     transition: .5s;
@@ -345,8 +361,10 @@ background-color: goldenrod;
     transform: scale(1.1);
 
 }
+/*******************************/
+/*********** Packages **********/
+/*******************************/
 
-/*** Package ***/
 .package-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 }
@@ -375,7 +393,9 @@ background-color: goldenrod;
 }
 
 
-/*** Team ***/
+/*******************************/
+/********** Our Teams **********/
+/*******************************/
 .team-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 }
@@ -420,8 +440,10 @@ background-color: goldenrod;
     color: #FFFFFF;
 }
 
+/*******************************/
+/********* Testimonials ********/
+/*******************************/
 
-/*** Testimonial ***/
 .testimonial-carousel::before {
     position: absolute;
     content: "";
@@ -495,7 +517,10 @@ background-color: goldenrod;
     border-color: var(--primary);
 }
 
-/*** Booking ***/
+/*******************************/
+/********* Booking form ********/
+/*******************************/
+
 .booking {
     background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/booking.jpg);
     background-position: center center;
@@ -503,7 +528,9 @@ background-color: goldenrod;
     background-size: cover;
 }
 
-/*** Latest News ***/
+/*******************************/
+/******** Our Latest News ******/
+/*******************************/
 
 .letast_news .single_news {
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
@@ -572,8 +599,10 @@ background-color: goldenrod;
     text-decoration: underline;
 }
 
+/*******************************/
+/********* Single Post *********/
+/*******************************/
 
-/***Single Post ***/
 
 .single h1,
 .single h2, 

@@ -25,7 +25,7 @@
         <div class="container-fluid">
             <div class="card card-default">
                 <div class="card-header">
-                  <h3 class="card-title">New package</h3>
+                  <h3 class="card-title">Select2 (Default Theme)</h3>
       
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -38,31 +38,49 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="#" method="post">
+                    @if (isset($article->id))
+                        <form action="{{route('articleUpdate')}}" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <input type="hidden" name="id" id="id" class="form-control" value="{{$article->id}}"> 
+                            </div>
+                    @else
+                        <form action="{{route('articleStore')}}" method="post" enctype="multipart/form-data">
+                    @endif
+                    
                         @csrf
                         <div class="row">
                             <div class="col-md-8">
                             <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control" name="title" id="title" placeholder="">
+                                <input type="text" value="{{isset($package->id) ? $package->title : ''}}" class="form-control" name="title" id="title" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="desc" class="form-label">Description</label>
+                                <textarea class="form-control" name="desc" id="desc" rows="3">{{isset($package->id) ? $package->desc : ''}}</textarea>
                             </div>
     
                             <div class="mb-3">
-                                <label for="content" class="form-label">Description</label>
-                                <textarea class="form-control" name="desc" id="summernote" rows="3"></textarea>
+                                <label for="content" class="form-label">Content</label>
+                                <textarea class="form-control" name="content" id="summernote" rows="3">{{isset($package->id) ? $package->content : ''}} </textarea>
                             </div>
+                            @if ($errors)
+                            <div class="alert alert-danger">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}<br>
+                                @endforeach
+                            </div>
+                            @endif
                             </div>
                             <!-- /.col -->
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label>Destination</label>
-                                    <select class="form-control select2" name="dest" style="width: 100%;" id="hid-elt">
+                                    <label>Category</label>
+                                    <select class="form-control select2" name="category" style="width: 100%;" id="hid-elt">
                                         <option selected="selected" value="">Select one</option>
-                                        <option>Alaska</option>
-                                        <option>Delaware</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Washington</option>
+                                        @foreach ($dests as $dest)
+                                            <option value="{{$dest->id}}" {{isset($package->id) && isset($package->id) ==$dest->id ? 'selected' : ''}} >{{$dest->title}}</option> 
+                                        @endforeach
+                                        
                                         <option value="new">New</option>
                                     </select>
                                 </div>
@@ -76,14 +94,16 @@
                                     <label for="exampleInputFile">File input</label>
                                     <div class="input-group mb-3">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="exampleInputFile" oninput="pic.src=window.URL.createObjectURL(this.files[0])">
+                                            <input type="file" class="custom-file-input" name="thumbnail"  id="exampleInputFile" oninput="pic.src=window.URL.createObjectURL(this.files[0])">
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
                                     </div>
                                     <div class="img-preview" style="width: 100%; height:200px; border: 1px solid rgb(32, 31, 31);">
-                                        <img src="" alt="" id="pic" class="w-100 h-100">
+                                        <img src="{{isset($package->id) ? asset('storage/thumbnails/'.$package->thumbnail) : ''}}" alt="" id="pic" class="w-100 h-100">
                                     </div>
                                 </div>
+    
+                                
                             </div>
                             <!-- /.col -->
                         </div>
