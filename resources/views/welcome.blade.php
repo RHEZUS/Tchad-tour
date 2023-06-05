@@ -28,6 +28,9 @@
     
     </head>
     <body class="">
+        <header>
+            <x-header></x-header>
+        </header>
         <main>
 
             <div class="container-fluid container-xxl p-0">
