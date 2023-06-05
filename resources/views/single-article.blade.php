@@ -69,7 +69,7 @@
                                         <img src="{{ asset('storage/thumbnails/'.$related->thumbnail)}}" />
                                     </div>
                                     <div class="post-text">
-                                        <a href="">{!! words($related->title, $limit = 8, $end = ' .....')!!}</a>
+                                        <a href="{{'/article/'.$article->id}}">{!! words($related->title, $limit = 8, $end = ' .....')!!}</a>
                                         <div class="post-meta">
                                             <p>By<a href="">Admin</a></p>
                                             <p>In<a href="">{{$related->category->title}}</a></p>
