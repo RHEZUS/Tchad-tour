@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destination;
+use App\Models\Package;
 use Illuminate\Http\Request;
 
 class PackageController extends Controller
@@ -18,6 +19,31 @@ class PackageController extends Controller
     }
 
     public function store(Request $request){
+/*
+        $request->validate([
+            'title'=>'required',
+
+            'desc'=>'required',
+            'dest-images'=>'required',
+            'dest-images.*' => 'mimes:jpeg,jpg,png',
+
+            'dest'=>'required',
+            'new_dest'=>'required_if:dest,==,new',
+
+            'price'=>'required',
+            'people'=>'required',
+            'thumbnail'=>'required',
+        ]);
+*/
+        $x= null;
+        if ($request->hasFile('dest-images')) {
+
+            foreach ($request->file('dest-images') as $image) {
+                $x++;
+            }
+        }
+
+        return $x;
 /*
         $request->validate([
             'title'=>'required',
@@ -234,10 +260,10 @@ class PackageController extends Controller
 
 
     public function packages(){
-/*        $data = [];
-        $data['articles']=Article::all();
-        return view('blog',$data);
-*/
+        /*$data = [];
+        $data['articles']=Package::all();*/
+        return view('packages');
+
     }
    
 

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="shortcut icon" href="{{asset('images/logo.png')}}" type="image/x-icon">
     <!-- Styles -->
     
     
@@ -37,23 +38,23 @@
                 <div class="owl-carousel  section-1-carousel">
                     <div class="item" style="--background: url('{{asset('images/tcad-1.jpg')}}')">
                         <div class="carousel-item-caption">
-                            <h1>Lorem, ipsum dolor sit.</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex voluptatum adipisci quis iusto dolorem officiis sit reprehenderit ipsum ab!</p>
-                            <a href="#" class="text-decoration-none read-btn p-2 me-2">Book Bow</a><a href="#" class="text-decoration-none book-btn p-2">Learn More</a>
+                            <h1>Afrika'nın en güzel yerini ziyaret et</h1>
+                            <p>Size en iyi turistik siteyi en iyi fiyata sunuyoruz.</p>
+                            <a href="#" class="text-decoration-none read-btn p-2 me-2 my-2">Reserv Yap</a><a href="#" class="text-decoration-none book-btn p-2">Daha Fazla</a>
                         </div>
                     </div>
                     <div class="item" style="--background: url('{{asset('images/tcad-13.jpg')}}')">
                         <div class="carousel-item-caption">
-                            <h1>Lorem, ipsum dolor sit.</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex voluptatum adipisci quis iusto dolorem officiis sit reprehenderit ipsum ab!</p>
-                            <a href="#" class="text-decoration-none read-btn p-2 me-2">Learn More</a> <a href="#" class="text-decoration-none book-btn p-2">Book Now</a>
+                            <h1>Afrika'nın en güzel yerini ziyaret et</h1>
+                            <p>Size en iyi turistik siteyi en iyi fiyata sunuyoruz.</p>
+                            <a href="#" class="text-decoration-none read-btn p-2 me-2 my-2">Reserv Yap</a><a href="#" class="text-decoration-none book-btn p-2">Daha Fazla</a>
                         </div>
                     </div>
                     <div class="item" style="--background: url('{{asset('images/tcad-10.jpeg')}}')">
                         <div class="carousel-item-caption">
-                            <h1>Lorem, ipsum dolor sit.</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex voluptatum adipisci quis iusto dolorem officiis sit reprehenderit ipsum ab!</p>
-                            <a href="#" class="text-decoration-none read-btn p-2 me-2">Book Bow</a><a href="#" class="text-decoration-none book-btn p-2">Learn More</a>
+                            <h1>Afrika'nın en güzel yerini ziyaret et</h1>
+                            <p>Size en iyi turistik siteyi en iyi fiyata sunuyoruz.</p>
+                            <a href="#" class="text-decoration-none read-btn p-2 me-2 my-2">Reserv Yap</a><a href="#" class="text-decoration-none book-btn p-2">Daha Fazla</a>
                         </div>
                     </div>
                 </div>
@@ -64,16 +65,16 @@
             <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="section-title bg-white text-center px-3">Services</h6>
-                        <h1 class="mb-5">Our Services</h1>
+                        <h6 class="section-title bg-white text-center px-3">Hizmetler</h6>
+                        <h1 class="mb-5">Hizmetlerimiz</h1>
                     </div>
                     <div class="row g-4">
                         <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="service-item rounded pt-3">
                                 <div class="p-4">
                                     <i class="fa fa-3x fa-globe mb-4 "></i>
-                                    <h5>WorldWide Tours</h5>
-                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                    <h5>dünya çapında turlar</h5>
+                                    <p>Size dünyanın birçok ülkesinde paketler sunuyoruz ve yolculuğunuzun her adımında size eşlik ediyoruz.</p>
                                 </div>
                             </div>
                         </div>
@@ -81,8 +82,8 @@
                             <div class="service-item rounded pt-3">
                                 <div class="p-4">
                                     <i class="fa fa-3x fa-hotel mb-4"></i>
-                                    <h5>Hotel Reservation</h5>
-                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                    <h5>Otel rezervasyonu</h5>
+                                    <p>en şık otellerde rezervasyonlarınızı yapar. zevkinize göre konforla ve en uygun fiyatlarla.</p>
                                 </div>
                             </div>
                         </div>
@@ -90,8 +91,8 @@
                             <div class="service-item rounded pt-3">
                                 <div class="p-4">
                                     <i class="fa fa-3x fa-user mb-4"></i>
-                                    <h5>Travel Guides</h5>
-                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                    <h5>Gezi Rehberi</h5>
+                                    <p>En beğenilen mekanları sizlere sunarak etkinliklerinizde size eşlik ediyoruz.</p>
                                 </div>
                             </div>
                         </div>
@@ -99,8 +100,8 @@
                             <div class="service-item rounded pt-3">
                                 <div class="p-4 ">
                                     <i class="fa fa-3x fa-cog  mb-4"></i>
-                                    <h5>Event Management</h5>
-                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                    <h5>Olay yönetimi</h5>
+                                    <p>En deneyimli turist rehberlerimiz size yardımcı olacak, en harika yerleri ziyaret etmenizi ...</p>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +114,7 @@
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="section-title bg-white text-center  px-3">Destinasiyonlarimiz</h6>
-                        <h1 class="mb-5">Popular Destination</h1>
+                        <h1 class="mb-5">popüler Destinasiyonlar</h1>
                     </div>
                     <div class="row g-3">
                         <div class="col-lg-7 col-md-6">
@@ -153,8 +154,8 @@
             <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="section-title bg-white text-center  px-3">Packages</h6>
-                        <h1 class="mb-5">Awesome Packages</h1>
+                        <h6 class="section-title bg-white text-center  px-3">Paketler</h6>
+                        <h1 class="mb-5">Muhteşem Paketler</h1>
                     </div>
                     <div class="row g-4 justify-content-center">
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -250,8 +251,8 @@
             <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="section-title bg-white text-center  px-3">Travel Guide</h6>
-                        <h1 class="mb-5">Meet Our Guide</h1>
+                        <h6 class="section-title bg-white text-center  px-3">Seyahat Rehberleri</h6>
+                        <h1 class="mb-5">Rehberlerimizle tanışın</h1>
                     </div>
                     <div class="row g-4">
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -262,7 +263,7 @@
 
                                 <div class="text-center pb-2">
                                     <h4 class="mb-0">Bourma Tahir</h4>
-                                    <small>Guide Touristique</small>
+                                    <small>Turistik Rehber</small>
                                 </div>
 
                                 <div class="d-flex justify-content-center py-1  mb-3">
@@ -279,7 +280,7 @@
                                 </div>
                                 <div class="text-center pb-2">
                                     <h4 class="mb-0">Oumar Djimet</h4>
-                                    <small>Guide Touristique</small>
+                                    <small>Turistik Rehber</small>
                                 </div>
 
                                 <div class="d-flex justify-content-center py-1  mb-3">
@@ -296,7 +297,7 @@
                                 </div>
                                 <div class="text-center pb-2">
                                     <h4 class="mb-0">Mahmoud Abakar</h4>
-                                    <small>Guide Touristique</small>
+                                    <small>Turistik Rehber</small>
                                 </div>
 
                                 <div class="d-flex justify-content-center py-1  mb-3">
@@ -313,7 +314,7 @@
                                 </div>
                                 <div class="text-center pb-2">
                                     <h4 class="mb-0">Mahamat Zene</h4>
-                                    <small>Guide Touristique</small>
+                                    <small>Turistik Rehber</small>
                                 </div>
 
                                 <div class="d-flex justify-content-center py-1  mb-3">
@@ -332,8 +333,8 @@
             <!-- Testimonial Start -->
             <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="text-center">
-                        <h6 class="section-title bg-white text-center px-3">Testimonial</h6>
-                        <h1 class="mb-5">Our Clients Say!!!</h1>
+                        <h6 class="section-title bg-white text-center px-3">Referans</h6>
+                        <h1 class="mb-5">Müşterilerimiz Diyor!!!</h1>
                     </div>
                     <div class="owl-carousel testimonial-carousel position-relative">
                         <div class="testimonial-item bg-white text-center border p-4">
@@ -369,8 +370,8 @@
             <div class="container-xxl py-5 wow fadeInUp letast_news" data-wow-delay="0.1s">
                 <div class="container">
                     <div class="text-center">
-                        <h6 class="section-title bg-white text-center px-3">Latest News</h6>
-                        <h1 class="mb-5">What is new!!!</h1>
+                        <h6 class="section-title bg-white text-center px-3">Son Haberler</h6>
+                        <h1 class="mb-5">Yeni olan ne!!!</h1>
                     </div> 
                     <div class="row">
                     @php
@@ -385,7 +386,7 @@
                                 <p class="date"><a href="#">{{$article->updated_at->format('m/d/Y')}}</a></p>
                                 <h3>{!! words($article->title, $limit = 25, $end = ' .....')!!}</h3>
                                 <p class="test">{!! words($article->desc, $limit = 25, $end = ' .....')!!}</p>
-                                <h3><a href="{{'/article/'.$article->id}}">READ MORE</a></h3>
+                                <h3><a href="{{'/article/'.$article->id}}">Daha Fazla</a></h3>
                             </div>
                         </div>
                     </div>

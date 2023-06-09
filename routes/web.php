@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PackageController;
@@ -40,8 +42,8 @@ Route::group(['middleware'=>['auth','user_role']], function(){
     Route::get('/dashboard/packages/form',[PackageController::class, 'form'])->name('packageForm');
     Route::post('/dashboard/packages/form',[PackageController::class, 'store'])->name('packageStore');
 
-    Route::get('/dashboard/packages/update/{id}',[PackageController::class, 'edit'])->name('editArt');
-    Route::post('/dashboard/packages/update',[PackageController::class, 'update'])->name('articleUpdate');
+    Route::get('/dashboard/packages/update/{id}',[PackageController::class, 'edit'])->name('editPack');
+    Route::post('/dashboard/packages/update',[PackageController::class, 'update'])->name('packUpdate');
     Route::get('/dashboard/packages/delete/{id}',[PackageController::class, 'delete']);
 
 
@@ -52,12 +54,27 @@ Route::group(['middleware'=>['auth','user_role']], function(){
     Route::get('/dashboard/trash',[TrashController::class,'Trash'])->name('trash');
 });
 
-
+/** Blog routes */
 Route::get('/blog', [ArticleController::class, 'blog'])->name('blog');
 Route::get('/articles/post',[ArticleController::class, 'singlePost'])->name('singlePost');
 Route::get('/article/{id}',[ArticleController::class, 'singlePost']);
 
+/**Packages routes */
+Route::get('/packages',[PackageController::class, 'packages'])->name('websPacks');
+
+
+/**Contact Routes */
+Route::get('/contact',[ContactController::class, 'contactForm'])->name('contact');
+Route::post('/contact', [ContactController::class, 'storeContact'])->name('storeContact');
+
+
+/**Homepage Routes */
 Route::get('/',[HomeController::class, 'index'])->name('home');
+
+/**Booking Routes */
+
+Route::get('/booking', [BookingController::class, 'bookingPage'])->name('booking');
+Route::post('/booking', [BookingController::class, 'store'])->name('storeBooking');
 
 Auth::routes();
 
